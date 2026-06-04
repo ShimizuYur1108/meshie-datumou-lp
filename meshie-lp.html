@@ -1563,15 +1563,7 @@
     <h2 class="section-title" style="color:var(--white)">施術の<em>様子</em></h2>
   </div>
   <div class="video-wrapper reveal">
-    <!-- 動画ができたら下の div を削除して <video> または <iframe> に差し替えてください -->
-    <!-- 例: <video src="treatment.mp4" controls style="width:100%"></video> -->
-    <!-- 例(YouTube): <iframe width="100%" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/YOUR_ID" frameborder="0" allowfullscreen></iframe> -->
-    <div class="video-placeholder">
-      <div class="video-placeholder-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="rgba(201,168,76,0.6)"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-      <p class="video-placeholder-text">施術動画 準備中</p>
-    </div>
+    <video src="treatment.mov" controls playsinline style="width:100%;display:block;"></video>
   </div>
 </section>
 
@@ -1584,72 +1576,42 @@
   <div class="ba-grid">
     <!-- カード1 -->
     <div class="ba-card reveal">
-      <div class="ba-images">
-        <div class="ba-img-wrap">
-          <!-- <img src="before1.jpg" alt="ビフォー"> に差し替えてください -->
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>BEFORE</span>
-          </div>
-          <span class="ba-img-label">BEFORE</span>
-        </div>
-        <div class="ba-img-wrap">
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>AFTER</span>
-          </div>
-          <span class="ba-img-label">AFTER</span>
-        </div>
+      <div class="ba-img-wrap" style="aspect-ratio:1/1;">
+        <img src="ba1.png" alt="うなじ脱毛 ビフォーアフター" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="ba-info">
         <p class="ba-num">CASE 01</p>
-        <p class="ba-caption">施術回数：6回 / 全身脱毛<br>※個人差があります</p>
+        <p class="ba-caption">うなじ脱毛 / 3回<br>※個人差があります</p>
       </div>
     </div>
     <!-- カード2 -->
     <div class="ba-card reveal">
-      <div class="ba-images">
-        <div class="ba-img-wrap">
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>BEFORE</span>
-          </div>
-          <span class="ba-img-label">BEFORE</span>
-        </div>
-        <div class="ba-img-wrap">
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>AFTER</span>
-          </div>
-          <span class="ba-img-label">AFTER</span>
-        </div>
+      <div class="ba-img-wrap" style="aspect-ratio:1/1;">
+        <img src="ba2.png" alt="背中脱毛 ビフォーアフター" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="ba-info">
         <p class="ba-num">CASE 02</p>
-        <p class="ba-caption">施術回数：8回 / 全身脱毛<br>※個人差があります</p>
+        <p class="ba-caption">背中脱毛 / 10回<br>※個人差があります</p>
       </div>
     </div>
     <!-- カード3 -->
     <div class="ba-card reveal">
-      <div class="ba-images">
-        <div class="ba-img-wrap">
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>BEFORE</span>
-          </div>
-          <span class="ba-img-label">BEFORE</span>
-        </div>
-        <div class="ba-img-wrap">
-          <div class="ba-img-placeholder">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-            <span>AFTER</span>
-          </div>
-          <span class="ba-img-label">AFTER</span>
-        </div>
+      <div class="ba-img-wrap" style="aspect-ratio:1/1;">
+        <img src="ba3.png" alt="足脱毛 ビフォーアフター" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="ba-info">
         <p class="ba-num">CASE 03</p>
-        <p class="ba-caption">施術回数：10回 / 全身脱毛<br>※個人差があります</p>
+        <p class="ba-caption">足脱毛 / 6回<br>※個人差があります</p>
+      </div>
+    </div>
+    <!-- カード4 -->
+    <div class="ba-card reveal">
+      <div class="ba-img-wrap" style="aspect-ratio:1/1;">
+        <img src="ba4.png" alt="脇脱毛 ビフォーアフター" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="ba-info">
+        <p class="ba-num">CASE 04</p>
+        <p class="ba-caption">脇脱毛 / 3回<br>※個人差があります</p>
       </div>
     </div>
   </div>
