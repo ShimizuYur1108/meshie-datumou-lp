@@ -330,6 +330,73 @@
     color: var(--mauve-deep);
   }
 
+  /* ===== HERO CTA BAND ===== */
+  .hero-cta-band {
+    background: var(--black);
+    padding: 24px 80px;
+  }
+
+  .hero-cta-band-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta-band-price {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta-band-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--mauve-light);
+    border: 1px solid rgba(196,168,130,0.4);
+    padding: 4px 12px;
+  }
+
+  .hero-cta-band-amount {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .hero-cta-band-amount sup {
+    font-size: 1rem;
+    color: var(--mauve-light);
+  }
+
+  .hero-cta-band-unit {
+    font-size: 0.75rem;
+    color: rgba(254,252,249,0.55);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-cta-band-btn {
+    background: var(--mauve-deep);
+    color: white;
+    padding: 16px 36px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .hero-cta-band-btn:hover {
+    background: var(--mauve);
+    transform: translateY(-2px);
+  }
+
   /* ===== WORRIES ===== */
   .worries {
     background: var(--cream);
@@ -1089,10 +1156,12 @@
     .hero-left { padding: 60px 24px; min-height: 100vh; }
     .hero-right { display: none; }
     section { padding: 64px 24px; }
-    .worries-grid { grid-template-columns: 1fr; }
+    .worries-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .worry-card { padding: 24px 18px; }
+    .worry-text { font-size: 0.78rem; }
     .campaign-inner { grid-template-columns: 1fr; gap: 40px; }
     .campaign-section { padding: 64px 24px; }
-    .ba-grid { grid-template-columns: 1fr; }
+    .ba-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
     .power-section { grid-template-columns: 1fr; gap: 40px; padding: 64px 24px; }
     .comparison-section { padding: 64px 24px; }
     .comp-table { font-size: 0.72rem; }
@@ -1100,6 +1169,10 @@
     .flow-steps { grid-template-columns: 1fr; gap: 28px; }
     .flow-steps::before { display: none; }
     .cta-section { padding: 80px 24px; }
+    .hero-cta-band { padding: 20px; }
+    .hero-cta-band-inner { flex-direction: column; gap: 16px; }
+    .hero-cta-band-btn { width: 100%; text-align: center; padding: 16px; }
+    .hero-cta-band-amount { font-size: 2.1rem; }
     footer { flex-direction: column; gap: 10px; text-align: center; padding: 28px 20px; }
   }
 </style>
@@ -1112,12 +1185,23 @@
     Esthetic Salon Meshie
     <span>FUKUI TAKAGI-CHUO</span>
   </div>
-  <a href="#cta" class="btn-header">🎁 キャンペーン予約</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <img src="fv-vio.png" alt="VIO脱毛で、もっと自分を好きになる。" style="width:100%;height:auto;display:block;">
+</section>
+
+<!-- HERO CTA -->
+<section class="hero-cta-band">
+  <div class="hero-cta-band-inner">
+    <div class="hero-cta-band-price">
+      <span class="hero-cta-band-label">美白パック付き</span>
+      <span class="hero-cta-band-amount"><sup>¥</sup>4,900</span>
+      <span class="hero-cta-band-unit">VIO初回 / 完全個室</span>
+    </div>
+    <a href="https://beauty.hotpepper.jp/kr/slnH000404885/" target="_blank" rel="noopener" class="hero-cta-band-btn">🎁 今すぐ予約する</a>
+  </div>
 </section>
 
 <!-- WORRIES -->
@@ -1250,16 +1334,8 @@
   </div>
   <div class="power-notes reveal">
     <div class="power-note">
-      <p class="power-note-title">POINT 01</p>
-      <p class="power-note-text">肌の状態や毛質に合わせて6〜11ジュールの範囲で出力を調整。デリケートなVIOエリアも一人ひとりに最適な出力で施術します。</p>
-    </div>
-    <div class="power-note">
-      <p class="power-note-title">POINT 02</p>
-      <p class="power-note-text">「他店では抜けなかった」という方でも、高出力ならではの効果を実感いただけるケースが多くあります。</p>
-    </div>
-    <div class="power-note">
-      <p class="power-note-title">POINT 03</p>
-      <p class="power-note-text">VIOは特に繊細なエリア。高出力でありながら、丁寧な照射で肌へのダメージを最小限に抑えます。</p>
+      <p class="power-note-title">POINT</p>
+      <p class="power-note-text">肌の状態や毛質に合わせて6〜11ジュールの範囲で出力を調整。「他店では抜けなかった」という方でも効果を実感いただけるケースが多くあります。デリケートなVIOエリアも、丁寧な照射で肌への負担を抑えます。</p>
     </div>
   </div>
 </section>
@@ -1338,7 +1414,7 @@
         <span class="limit-badge">初回限定</span>
         <span class="limit-badge urgent">毎月10名様まで</span>
       </div>
-      <a href="#" class="btn-campaign">キャンペーン専用ページで予約する</a>
+      <a href="https://beauty.hotpepper.jp/kr/slnH000404885/" target="_blank" rel="noopener" class="btn-campaign">キャンペーン専用ページで予約する</a>
       <p class="campaign-caution">
         ※ 初めてご来店の方限定<br>
         ※ 毎月先着10名様まで。定員になり次第終了
@@ -1491,7 +1567,7 @@
     <p class="cta-gift">🎁 美白パック プレゼント</p>
   </div>
   <!-- 予約URLをここに入れてください -->
-  <a href="#" class="btn-cta-main">キャンペーン専用ページで予約する</a>
+  <a href="https://beauty.hotpepper.jp/kr/slnH000404885/" target="_blank" rel="noopener" class="btn-cta-main">キャンペーン専用ページで予約する</a>
   <p class="cta-caution">
     ※ 初めてご来店の方限定<br>
     ※ 毎月先着10名様まで。定員になり次第終了します
