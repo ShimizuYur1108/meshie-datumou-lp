@@ -441,9 +441,55 @@
     transition: color 0.3s;
   }
 
+  /* ===== MESSAGE BAND ===== */
+  .msg-band {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .msg-band-1 {
+    background-image: linear-gradient(rgba(42,39,36,0.45), rgba(42,39,36,0.55)), url('sec-leg.jpg');
+  }
+
+  .msg-band-2 {
+    background-image: linear-gradient(rgba(42,39,36,0.45), rgba(42,39,36,0.55)), url('sec-counsel.jpg');
+  }
+
+  .msg-band-inner {
+    max-width: 700px;
+  }
+
+  .msg-band-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 20px;
+  }
+
+  .msg-band-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
   /* ===== POWER ===== */
   .power {
-    background: var(--black);
+    background: linear-gradient(rgba(42,39,36,0.88), rgba(42,39,36,0.92)), url('sec-machine.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1401,6 +1447,9 @@
     .hero-cta-band-btn { width: 100%; text-align: center; padding: 16px; }
     .hero-cta-band-amount { font-size: 2.2rem; }
 
+    .msg-band { background-attachment: scroll; min-height: 320px; padding: 60px 24px; }
+    .power { background-attachment: scroll; }
+
     .comp-table { font-size: 0.75rem; }
     .comp-table thead th, .comp-table tbody td { padding: 12px 10px; }
 
@@ -1473,6 +1522,14 @@
       <h3 class="strength-title">地域最安値水準の総額</h3>
       <p class="strength-desc">初回4,980円から。高出力でありながら圧倒的なコストパフォーマンスを実現しました。</p>
     </div>
+  </div>
+</section>
+
+<!-- MESSAGE BAND 1 -->
+<section class="msg-band msg-band-1">
+  <div class="msg-band-inner reveal">
+    <p class="msg-band-sub">もう、ムダ毛に振り回されない</p>
+    <h2 class="msg-band-title">自己処理の手間から、<br>解放される毎日へ。</h2>
   </div>
 </section>
 
@@ -1683,6 +1740,14 @@
     </div>
   </div>
   <p class="ba-note reveal">※掲載写真はお客様の許可をいただいたものです。効果には個人差があります。</p>
+</section>
+
+<!-- MESSAGE BAND 2 -->
+<section class="msg-band msg-band-2">
+  <div class="msg-band-inner reveal">
+    <p class="msg-band-sub">初めての方も、安心して</p>
+    <h2 class="msg-band-title">丁寧なカウンセリングで、<br>あなたに合ったプランを。</h2>
+  </div>
 </section>
 
 <!-- FLOW -->
