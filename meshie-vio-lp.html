@@ -514,7 +514,10 @@
 
   /* ===== POWER ===== */
   .power-section {
-    background: var(--black);
+    background: linear-gradient(rgba(46,40,32,0.88), rgba(46,40,32,0.92)), url('sec-vio2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     padding: 96px 80px;
     display: grid;
@@ -583,6 +586,46 @@
     line-height: 1.9;
     color: rgba(250,247,244,0.6);
     font-weight: 300;
+  }
+
+  /* ===== MESSAGE BAND ===== */
+  .msg-band {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .msg-band-1 {
+    background-image: linear-gradient(rgba(46,40,32,0.4), rgba(46,40,32,0.5)), url('sec-vio1.jpg');
+  }
+
+  .msg-band-2 {
+    background-image: linear-gradient(rgba(46,40,32,0.5), rgba(46,40,32,0.6)), url('sec-counsel.jpg');
+  }
+
+  .msg-band-inner { max-width: 700px; }
+
+  .msg-band-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: rgba(254,252,249,0.9);
+    margin-bottom: 20px;
+  }
+
+  .msg-band-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
   }
 
   /* ===== COMPARISON ===== */
@@ -1162,7 +1205,8 @@
     .campaign-inner { grid-template-columns: 1fr; gap: 40px; }
     .campaign-section { padding: 64px 24px; }
     .ba-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .power-section { grid-template-columns: 1fr; gap: 40px; padding: 64px 24px; }
+    .power-section { grid-template-columns: 1fr; gap: 40px; padding: 64px 24px; background-attachment: scroll; }
+    .msg-band { background-attachment: scroll; min-height: 300px; padding: 60px 24px; }
     .comparison-section { padding: 64px 24px; }
     .comp-table { font-size: 0.72rem; }
     .comp-table thead th, .comp-table tbody td { padding: 11px 8px; }
@@ -1282,6 +1326,14 @@
         <p class="strength-body-desc">使用マシンは6〜11ジュールの高出力対応。一般エステの最大出力を超えるパワーで、「抜けを実感できない」という不満を解消します。</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MESSAGE BAND 1 -->
+<section class="msg-band msg-band-1">
+  <div class="msg-band-inner reveal">
+    <p class="msg-band-sub">VIOの悩みから、自由になる</p>
+    <h2 class="msg-band-title">自信を持って、<br>毎日を過ごせる肌へ。</h2>
   </div>
 </section>
 
@@ -1513,6 +1565,14 @@
       <h3 class="flow-title">卒業</h3>
       <p class="flow-desc">満足いただけるまでサポート。2回目以降もLINEで予約できます。</p>
     </div>
+  </div>
+</section>
+
+<!-- MESSAGE BAND 2 -->
+<section class="msg-band msg-band-2">
+  <div class="msg-band-inner reveal">
+    <p class="msg-band-sub">初めての方も、安心して</p>
+    <h2 class="msg-band-title">完全個室・女性スタッフが、<br>丁寧に向き合います。</h2>
   </div>
 </section>
 
