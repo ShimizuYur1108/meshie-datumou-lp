@@ -1528,7 +1528,7 @@ src="https://www.facebook.com/tr?id=599181942993725&ev=PageView&noscript=1"/></n
       <span class="hero-cta-band-amount"><sup>¥</sup>4,980</span>
       <span class="hero-cta-band-unit">全身脱毛 / 90分</span>
     </div>
-    <a href="https://instagram.kanzashi.com/l/1bQfb966coG/kirei" target="_blank" rel="noopener" class="hero-cta-band-btn">🎁 今すぐ予約する</a>
+    <a href="https://instagram.kanzashi.com/l/1bQfb966coG/kirei" onclick="fbq('trackCustom','ReservationClick')" target="_blank" rel="noopener" class="hero-cta-band-btn">🎁 今すぐ予約する</a>
   </div>
 </section>
 
@@ -1884,7 +1884,7 @@ src="https://www.facebook.com/tr?id=599181942993725&ev=PageView&noscript=1"/></n
       </div>
     </div>
     <!-- 予約URLをここに入れてください -->
-    <a href="https://instagram.kanzashi.com/l/1bQfb966coG/kirei" target="_blank" rel="noopener" class="btn-campaign">キャンペーン専用ページで予約する</a>
+    <a href="https://instagram.kanzashi.com/l/1bQfb966coG/kirei" onclick="fbq('trackCustom','ReservationClick')" target="_blank" rel="noopener" class="btn-campaign">キャンペーン専用ページで予約する</a>
     <p class="campaign-caution">
       ※ 初めてご来店の方限定
     </p>
@@ -1969,8 +1969,10 @@ src="https://www.facebook.com/tr?id=599181942993725&ev=PageView&noscript=1"/></n
   ctaObserver.observe(ctaSection);
 </script>
 <script>
-document.querySelectorAll('a[href*="instagram.kanzashi.com"]').forEach(function(el){
-  el.addEventListener('click', function(){ fbq('trackCustom', 'ReservationClick'); });
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a[href*="instagram.kanzashi.com"]');
+  if(!a) return;
+  try{ fbq('trackCustom', 'ReservationClick'); }catch(err){}
 });
 </script>
 </body>
