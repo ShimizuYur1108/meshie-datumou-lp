@@ -1968,5 +1968,10 @@ src="https://www.facebook.com/tr?id=599181942993725&ev=PageView&noscript=1"/></n
 
   ctaObserver.observe(ctaSection);
 </script>
+<script>
+document.querySelectorAll('a[href*="instagram.kanzashi.com"]').forEach(function(el){
+  el.addEventListener('click', function(){ fbq('trackCustom', 'ReservationClick'); });
+});
+</script>
 </body>
 </html>
